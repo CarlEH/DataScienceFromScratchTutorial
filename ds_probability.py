@@ -19,7 +19,8 @@ def normal_pdf(x, mu=0, sigma=1):
     return (math.exp(-(x-mu)**2 /(2 * sigma**2))) / (sqrt_two_pi * sigma)
 
 def normal_cdf(x, mu=0, sigma=1):
-    return (1 + math.erf((x - mu) / (math.sqrt(2) * sigma))) / 2
+    #print('x: ', x, ' mu: ', mu, ' sigma: ', sigma)
+    return (1 + math.erf((x - mu) / math.sqrt(2) / sigma)) / 2
    # return (1 + math.erf((x - mu) / math.sqrt(2) / sigma)) / 2
 
 def inverse_normal_cdf(p, mu=0, sigma=1, tolerance=0.00001):
